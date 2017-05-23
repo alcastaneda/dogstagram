@@ -1,0 +1,12 @@
+<a href="/photos">See All Photos</a>
+<img src=<%= @photo.photo_url %>>
+
+<% if session[:user_id] && session[:user_id] == @photo.user_id %>
+
+	<form action="/photos/<%= @photo.id %>" method="post">
+		<input type="hidden" name="_method" value="delete">
+		<input type="submit" value="Delete Photo">
+	</form>
+
+<%end%>
+

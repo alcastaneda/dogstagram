@@ -1,0 +1,5 @@
+<form action="/photos/<%=@photo.id%>" method="post">
+	<input type="hidden" name="_method" value="patch">
+	<input type="text" name="photo[photo_url]" value=<%= @photo.photo_url%>>
+	<input type="submit" name="Edit Photo">
+</form>

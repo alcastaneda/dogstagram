@@ -1,0 +1,11 @@
+<% if @error %>
+	<p><%= @error %></p>
+<%end%>	
+
+<form action="/users" method="post">
+	<input type="text" name="username" placeholder="username" required>
+	<input type="text" name="first_name" placeholder="first name" required>
+	<input type="text" name="last_name" placeholder="last name" required>
+	<input type="text" name="password" placeholder="password" required>
+	<input type="submit" value="Sign Up">
+</form>

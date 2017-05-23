@@ -1,0 +1,5 @@
+<a href="/photos/new">Create Photo</a>
+
+<% @photos.each do |photo| %>
+	<a href="/photos/<%=photo.id%>"><img src=<%= photo.photo_url %>></a>
+<% end %>
