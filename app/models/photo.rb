@@ -13,8 +13,8 @@ class Photo < ActiveRecord::Base
 	def self.upload(photo_url)
 		auth = {
 		  cloud_name: "geekincognito",
-		  api_key:    ENV["CLD_KEY"],
-		  api_secret: ENV["CLD_SECRET"]
+		  api_key:    ENV[CLD_KEY],
+		  api_secret: ENV[CLD_SECRET]
 		}
 		Cloudinary::Uploader.upload(photo_url, auth)
 	end
